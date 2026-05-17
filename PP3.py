@@ -1,0 +1,6 @@
+x1 = float(input("Digite x1:"))
+y1 = float(input("Digite y1:"))
+x2 = float(input("Digite x2:"))
+y2 = float(input("Digite y2:"))
+distancia = (((((x2 - x1)**2 + (y2 - y1)**2))**(1/2)))
+print("Distancia entre os pontos é:",distancia)
