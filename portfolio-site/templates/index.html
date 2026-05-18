@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfólio Acadêmico</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Portfólio Acadêmico</h1>
+
+        <p>
+            Projetos desenvolvidos durante o primeiro semestre de
+            Engenharia de Software.
+        </p>
+    </header>
+
+
+    <main class="container">
+
+        {% for projeto in projetos %}
+
+        <div class="card">
+
+            <h2>{{ projeto.nome }}</h2>
+
+            <p>{{ projeto.descricao }}</p>
+
+            <a href="{{ projeto.link }}" target="_blank">
+                Ver Projeto
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </main>
+
+
+    <footer>
+        <p>Feito por Matheus Kenay</p>
+    </footer>
+
+</body>
+</html>
